@@ -3,8 +3,8 @@ package main
 import (
 	"io/ioutil"
 	"html/template"
-	// "os"
 	"bytes"
+    "flag"
 )
 
 
@@ -16,27 +16,30 @@ func readFile(filename string) string {
 	return string(fileContents)
 }
 
+func createAndSaveFile(filename string, data siteData) {
+	paths := []string{"template.tmpl"}
+	buffer := new(bytes.Buffer)
+	t := template.Must(template.New("template.tmpl").ParseFiles(paths...))
+	err := t.Execute(buffer, data)
+	if err != nil {
+		panic(err)
+	}
+	bytesToWrite := []byte(buffer.String())
+	err = ioutil.WriteFile(filename + ".html", bytesToWrite, 0644)
+	if err != nil {
+		panic(err)
+	}
+}
+
 type siteData struct {
     Content string
 }
 
 func main() {
-	data := siteData{Content: readFile("first-post.txt")}
+	fileName := flag.String("file", "content", "The name of your .txt file containing data to be inserted into the template.")
+	flag.Parse()
 
-	paths := []string{"template.tmpl"}
+	data := siteData{Content: readFile(*fileName+".txt")}
 
-	buffer := new(bytes.Buffer)
-
-	t := template.Must(template.New("template.tmpl").ParseFiles(paths...))
-
-	err := t.Execute(buffer, data)
-	if err != nil {
-		panic(err)
-	}
-
-	bytesToWrite := []byte(buffer.String())
-	err = ioutil.WriteFile("first-post.html", bytesToWrite, 0644)
-	if err != nil {
-		panic(err)
-	}
+	createAndSaveFile(*fileName, data)
 }
