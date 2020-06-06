@@ -1,28 +1,42 @@
 package main
 
-<<<<<<< HEAD
 import (
 	"io/ioutil"
+	"html/template"
+	// "os"
+	"bytes"
 )
 
-func main() {
 
+func readFile(filename string) string {
+	fileContents, err := ioutil.ReadFile(filename)
+	if err != nil {
+		panic(err)
+	}
+	return string(fileContents)
 }
 
-func readFile() string {
-	fileContents, err := ioutil.ReadFile("first-post.txt")
+type siteData struct {
+    Content string
+}
+
+func main() {
+	data := siteData{Content: readFile("first-post.txt")}
+
+	paths := []string{"template.tmpl"}
+
+	buffer := new(bytes.Buffer)
+
+	t := template.Must(template.New("template.tmpl").ParseFiles(paths...))
+
+	err := t.Execute(buffer, data)
 	if err != nil {
 		panic(err)
 	}
 
-	return string(fileContents)
+	bytesToWrite := []byte(buffer.String())
+	err = ioutil.WriteFile("first-post.html", bytesToWrite, 0644)
+	if err != nil {
+		panic(err)
+	}
 }
-
-func renderTemplate()
-=======
-import "fmt"
-
-func main() {
-	fmt.Println("Hello, world!")
-}
->>>>>>> 9514ac8a2c135a448a2b15a4b246dcd5d59ee7bf
