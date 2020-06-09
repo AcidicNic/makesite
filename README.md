@@ -59,26 +59,26 @@ If you get stuck on any step, be sure to print the output to `stdout`!
 - [x] **Add, commit, and push to GitHub**.
 - [x] Add a new flag to your command named `file`. This flag represents the name of any `.txt` file in the same directory as your program. Run `./makesite --file=latest-post.txt` to test.
 - [x] Update the `save` function to use the input filename to generate a new HTML file. For example, if the input file is named `latest-post.txt`, the generated HTML file should be named `latest-post.html`.
-- [ ] **Add, commit, and push to GitHub**.
+- [x] **Add, commit, and push to GitHub**.
 
 #### v1.0 Stretch Challenges
 
-- [ ] Use Bootstrap, or another CSS framework, to enhance the style and readability of your template. _Get creative! Writing your very own website generator is a great opportunity to broadcast your style, personality, and development preferences to the world!_
+- [x] Use Bootstrap, or another CSS framework, to enhance the style and readability of your template. _Get creative! Writing your very own website generator is a great opportunity to broadcast your style, personality, and development preferences to the world!_
 
 ### v1.1
 
 #### v1.1 Requirements
 
-- [ ] Create 3 new `.txt` files for testing in the same directory as your project.
-- [ ] Add a new flag to the `makesite` command named `dir`.
-- [ ] Use the flag to find all `.txt` files in the given directory. Print them to `stdout`.
-- [ ] With the list of `.txt` files you found, generate an HTML page for each.
-- [ ] Run `./makesite --dir=.` to test in your local directory.
-- [ ] **Add, commit, and push to GitHub**.
+- [x] Create 3 new `.txt` files for testing in the same directory as your project.
+- [x] Add a new flag to the `makesite` command named `dir`.
+- [x] Use the flag to find all `.txt` files in the given directory. Print them to `stdout`.
+- [x] With the list of `.txt` files you found, generate an HTML page for each.
+- [x] Run `./makesite --dir=.` to test in your local directory.
+- [x] **Add, commit, and push to GitHub**.
 
 #### v1.1 Stretch Challenges
 
-- [ ] Recursively find all `.txt` files in the given directory, as well as it's subdirectories. Print them to `stdout` to make sure. Generate an HTML page for each.
+- [x] Recursively find all `.txt` files in the given directory, as well as it's subdirectories. Print them to `stdout` to make sure. Generate an HTML page for each.
 - [ ] When your program finishes, print: `Success! Generated 5 pages.` The `Success!` substring must be <span style="color: green; font-weight:bold;">bold green</span>, and the count (`5`) must be **bold**.
 - [ ] Modify the success message to read: `Success! Generated 5 pages (18.2kB total).` Calculate the total by summing the size of each HTML file, then converting the total to kilobytes. Always return one significant digit after the decimal point.
 - [ ] Determine how long it took to execute your static site generator. Modify the success message to read: `Success! Generated 5 pages (18.2kB total) in 3.25 seconds.` Always return two significant digits after the decimal point.
