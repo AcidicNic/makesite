@@ -1,5 +1,16 @@
 oh no, this cheese file has no title!
 
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  This is just plain html from the datafile for some reason
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+# I'm big
+
+## [I'm a link~!](https://github.com/acidicnic/makesite)
+
 # Do you speak cheese?
 
 Mozzarella blue castello taleggio. St. agur blue cheese pepper jack pecorino cheese slices cheesy feet fromage feta emmental. Mozzarella caerphilly swiss lancashire cut the cheese dolcelatte cheesecake jarlsberg. Dolcelatte pepper jack port-salut gouda cheese slices goat cheese and wine babybel. Cheese strings.

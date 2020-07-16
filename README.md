@@ -4,12 +4,12 @@
 
 ### Examples
 
-[Live demo of an html file created from this readme!](https://acidicnic.github.io/makesite/)
+[README.md Demo](https://acidicnic.github.io/makesite/) created from this readme!
 
-[Live demo](https://acidicnic.github.io/makesite/io_text/animalcrossing) of animalcrossing.html
+[Animal Crossing Demo](https://acidicnic.github.io/makesite/test_io/animalcrossing)
  - datafile: [animalcrossing.txt](https://github.com/AcidicNic/makesite/blob/master/test_io/animalcrossing.txt)
 
-[Live demo](https://acidicnic.github.io/makesite/io_text/cheese) of cheese.html
+[Cheese Demo](https://acidicnic.github.io/makesite/test_io/cheese)
  - datafile: [cheese.md](https://github.com/AcidicNic/makesite/blob/master/test_io/cheese.md)
 
 
