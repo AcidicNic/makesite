@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Static Site Generator</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Bootswatch Theme (minty) -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/1e324e14c9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-dark bg-dark">
+
+            <a class="navbar-brand mr-auto" href=""><i class="fas fa-keyboard mr-2"></i>Static Site Generator</a>
+        </nav>
+        <div class="w-75 mx-auto my-4" style="white-space: pre-line"><h1>🔗 Static Site Generator</h1>
+
+<p><a href="https://goreportcard.com/report/github.com/acidicnic/makesite"><img src="https://goreportcard.com/badge/github.com/acidicnic/makesite" alt="Go Report Card" /></a></p>
+
+<h4>[Here&rsquo;s an example HTML file created from this readme!]()</h4>
+
+<h2>Getting Started</h2>
+
+<pre><code class="language-bash">git clone https://github.com/AcidicNic/makesite.git
+cd makesite
+
+go run makesite.go
+</code></pre>
+
+<h4>What will this do? (All Default Flags)</h4>
+
+<ul>
+<li>Crawl the current directory and all subdirectories for .txt files</li>
+<li>Create HTML files for each .txt file using template.tmpl</li>
+<li>New HTML files will have the same filename as the .txt data file, they will be stored in the same directory as their source .txt file.</li>
+</ul>
+
+<h2>Flags</h2>
+
+<pre><code class="language-bash">// Will make .html files for each .txt file in the folder /test_io using my_tmpl.tmpl
+go run makesite.go -dir=&quot;/test_io&quot; -tmpl=&quot;my_tmpl&quot;
+
+// Will only make an .html file for README.md in the folder /test_io
+go run makesite.go -file=&quot;readme&quot; -ext=&quot;md&quot;
+</code></pre>
+
+<ul>
+<li><strong>dir</strong> <em>string</em>
+
+<ul>
+<li>The directory you&rsquo;d like to search for data files in. (<em>default &ldquo;.&rdquo;</em>)</li>
+</ul></li>
+<li><strong>ext</strong> <em>string</em>
+
+<ul>
+<li>Extension for data file(s) you&rsquo;d like to use. (<em>default &ldquo;.txt&rdquo;</em>)</li>
+</ul></li>
+<li><strong>file</strong> <em>string</em>
+
+<ul>
+<li>The name of a file containing data to be inserted into the template, without the extension!</li>
+<li><strong>Only use this flag if you want to create a single html file.</strong></li>
+</ul></li>
+<li><strong>tmpl</strong> <em>string</em>
+
+<ul>
+<li>A .tmpl file to insert data into. (<em>default &ldquo;template&rdquo;</em>)</li>
+</ul></li>
+</ul>
+
+<h2>Data File Format</h2>
+
+<ul>
+<li>If first line of the file starts with &ldquo;TITLE:&rdquo;, the text on that line will be the title in the head and navbar of the HTML file outputted. Otherwise, the filename will be the title.</li>
+<li>You can use a mix of markdown, plain text, and HTML (if you want to&hellip;) in your data file. This will all be inserted into the body of the template.</li>
+</ul>
+</div>
+
+    </div>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+</html>

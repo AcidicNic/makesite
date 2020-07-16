@@ -2,7 +2,16 @@
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/acidicnic/makesite)](https://goreportcard.com/report/github.com/acidicnic/makesite)
 
-#### [Here's an example HTML file created from this readme!]()
+### Examples
+
+[Live demo of an html file created from this readme!](https://acidicnic.github.io/makesite/)
+
+[Live demo](https://acidicnic.github.io/makesite/io_text/animalcrossing) of animalcrossing.html
+ - datafile: [animalcrossing.txt](https://github.com/AcidicNic/makesite/blob/master/test_io/animalcrossing.txt)
+
+[Live demo](https://acidicnic.github.io/makesite/io_text/cheese) of cheese.html
+ - datafile: [cheese.md](https://github.com/AcidicNic/makesite/blob/master/test_io/cheese.md)
+
 
 ## Getting Started
 
