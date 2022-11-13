@@ -10,7 +10,7 @@
  - datafile: [animalcrossing.txt](https://github.com/AcidicNic/makesite/blob/master/test_io/animalcrossing.txt)
 
 [Cheese Demo](https://acidicnic.github.io/makesite/test_io/cheese)
- - datafile: [cheese.md](https://github.com/AcidicNic/makesite/blob/master/test_io/cheese.md)
+ - datafile: [cheese.md](https://github.com/AcidicNic/makesite/blob/master/test_io/cheese.md?plain=1)
 
 
 ## Getting Started
